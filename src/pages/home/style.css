@@ -1,0 +1,255 @@
+.container {
+}
+
+.header-options--wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.searchbar {
+    height: 30px;
+}
+
+.home-header {
+    /* background: #cf0000; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, .2);
+    z-index: 500;
+}
+
+.header-options li {
+    margin-right: 16px;
+}
+
+.marvel-logo {
+    position: absolute;
+    left: 5%;
+    /* margin: 0 auto 0 32px; */
+}
+
+ul {
+    display: flex;
+}
+
+.section-carousel {
+    position: relative;
+}
+
+.carousel-div {
+    overflow: hidden;
+    max-height: 500px;
+}
+.carousel-div img { 
+    width: auto;
+}
+
+.carousel-detail {
+    position: absolute;
+    bottom: 33%;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+}
+
+.section-banner {
+    position: relative;
+}
+
+.banner-container {
+    overflow: hidden;
+    /* max-height: 500px; */
+    margin-top: 100px;
+}
+
+.banner-container img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.banner-comics-container {
+    background: #fff;
+    position: absolute;
+    bottom: -65px;
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+    border: 2px solid rgb(255, 231, 98);
+}
+
+.comics-img-1 {
+    width: 120px;
+}
+
+.section-images--info {
+    margin-top: 200px;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-1--wrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.row-1--wrapper l2,
+.row-2--wrapper l2,
+.row-3--wrapper l2 {
+    width: 300px;
+    position: absolute;
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.row-2--wrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.row-align--center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-align--center a {
+    color: white;
+    margin-bottom: 16px;
+    text-decoration: none;
+}
+
+.row-3--wrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.section-images--info {
+    position: relative;
+    margin-top: 300px;
+}
+
+.section-images--info l1 {
+    font-size: 30px;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row-1 {
+    background-color: #000;
+}
+
+.row-1 div {
+    /* background-color: #fff; */
+    width: 300px;
+}
+
+.row-2 {
+    margin-top: 72px;
+    background-color: #fff;
+}
+
+.row-2 div {
+    background-color: #fff;
+    width: 300px;
+}
+
+.row-3 {
+    margin-top: 72px;
+    background-color: #000;
+}
+
+.row-3 div {
+    width: 300px;
+}
+
+.row-1 img,
+.row-2 img,
+.row-3 img {
+    border-radius: 16px;
+    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, .2);
+    transition: 0.2s ease-in-out;
+    transform: scale(1.2);
+}
+
+.row-1 img:hover,
+.row-2 img:hover,
+.row-3 img:hover {
+    transform: scale(1.1);
+}
+
+.heroes-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.heroes-list a {
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.section-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 72px;
+}
+
+.section-cards l1 {
+    font-size: 30px;
+    margin: 100px 0 30px 0;
+}
+
+.cards-comics {
+    display: flex;
+    justify-content: center;
+}
+
+.section-cards div {
+    margin: 0 12px 0 12px;
+}
+
+/* FOOTER STYLES */
+.footer-container {
+    position: relative;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    padding: 56px;
+}
+
+.footer-container p {
+    color: white;
+}
+
+.footer-container img {
+    margin: 0 56px 0 auto;
+}
+
+/* COMMON STYLES */
+.text-white--withmargin {
+    color: white;
+    margin-bottom: 8px;
+}
