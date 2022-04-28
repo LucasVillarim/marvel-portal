@@ -7,6 +7,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -53,6 +54,10 @@ h1, h2, h3, h4, h5, h6, a, span {
   height: 225px;
   border-radius: 16px;
   perspective: 1000px;
+}
+
+.card-body h3 {
+  max-width: 150px;
 }
 
 .card-inner {
@@ -125,4 +130,8 @@ h1, h2, h3, h4, h5, h6, a, span {
 .nav--link:hover:after {
   transform: scaleX(1);
   transform-origin: 0 50%;
+}
+
+.card-subtitle {
+  max-width: 150px;
 }

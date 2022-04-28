@@ -1,0 +1,59 @@
+.member-container {
+    background:linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+
+        width: 80%;
+    min-height: 100vh;
+    margin: auto;
+}
+
+.buy-comics {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.buy-comics .card-body {
+    margin: 0 16px;
+}
+
+.buy-comics h3 {
+    color: black;
+}
+
+.comics-pack {
+    display: flex;
+    margin-top: 40px;
+}
+
+.buy-comics h3 {
+    margin: 0 0 16px 0;
+    color: white;
+    font-size: 30px;
+}
+
+.buy-btn {
+    background-color: #ED1D24;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    border: none;
+    width: 150px;
+    height: 48px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    
+}
+
+.buy-btn:hover {
+    background-color: #fff;
+    color: #ED1D24;
+}
+
+.countdown {
+    margin-top: 25px;
+    font-size: 30px;
+    color: white;
+}

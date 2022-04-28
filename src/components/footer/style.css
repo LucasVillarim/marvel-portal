@@ -1,0 +1,16 @@
+.footer-container {
+    position: relative;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    padding: 56px;
+}
+
+.footer-container p {
+    color: white;
+}
+
+.footer-container img {
+    margin: 0 56px 0 auto;
+}

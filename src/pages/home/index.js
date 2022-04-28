@@ -7,13 +7,14 @@ export default function HomeComponent() {
 
     return (
         <div className="container">
-
+            {/* Entrance banner */}
             <section className="section-banner--parallax">
                 <div className="banner-title--wrapper">
                     <h1 className="banner-title">PORTAL</h1>
                 </div>
             </section>
 
+            {/* Second banner */}
             <section className='section-banner'>
                 <h1 className='section-title'>Marvel Universe</h1>
                 <div className='banner-container'>
@@ -21,6 +22,7 @@ export default function HomeComponent() {
                 </div>
             </section>
 
+            {/* Spider-man section */}
             <section className="section-images--info">
                 <h1>Spider Verse</h1>
                 <div className='row-1'>
@@ -60,18 +62,14 @@ export default function HomeComponent() {
                 </div>
             </section>
 
+            {/* Comics section */}
             <section className='section-cards'>
                 <h1>Comics</h1>
                 <div className='cards-comics'>
-                    <Cards content="comics" />
+                    <Cards content="comics" selectList={[2, 3, 4, 8, 12, 11]} />
                 </div>
 
             </section>
-
-            <footer className='footer-container'>
-                <p>Data provided by Marvel. © 2014 Marvel</p>
-                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png' width={200} />
-            </footer>
         </div>
     )
 }

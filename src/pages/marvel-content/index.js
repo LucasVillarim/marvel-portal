@@ -1,9 +1,9 @@
-import style from './style.css';
 import { useGlobal } from '../../context/context';
 import { useLocation } from 'react-router-dom';
+import style from './style.css';
 
-export default function EventsComponent() {
-    const { marvelEvents, marvelComics, marvelHeroes } = useGlobal();
+export default function MarvelContentComponent() {
+    const { marvelEvents, marvelComics, marvelHeroes, marvelCreators } = useGlobal();
     const {state} = useLocation();
 
     const handleContentToMap = () => {
@@ -14,17 +14,20 @@ export default function EventsComponent() {
               return mapContent(marvelComics);
           case 'events':
               return mapContent(marvelEvents);
+          case 'creators':
+              return mapContent(marvelCreators);
           default:
               break;
       }
     }
 
+    // Dynamically maps the content passed
     const mapContent = (contentToMap) => {
         return contentToMap.map(marvelContent => {
             return (
-                <div className='event-wrapper'>
+                <div key={marvelContent.id} className='event-wrapper'>
                     <img src={marvelContent.thumbnail?.path + '/portrait_xlarge.jpg'} alt="img comic" />
-                    <h3>{marvelContent?.title}</h3>
+                    <h3>{marvelContent?.title || marvelContent?.fullName}</h3>
                     <ul>
                         <li>
                             <a href={marvelContent.urls[0]?.url} target="_blank">
