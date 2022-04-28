@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance from '../services';
 import md5 from 'md5';
 
 const StateContext = createContext({});
@@ -12,6 +12,7 @@ export const StateProvider = ({ children }) => {
     const [marvelSpiderVerse, setMarvelSpiderVerse] = useState([]);
     const [marvelComics, setMarvelComics] = useState([]);
     const [marvelEvents, setMarvelEvents] = useState([]);
+    const [marvelCreators, setMarvelCreators] = useState([]);
     const [dataBucket, setDataBucket] = useState([]);
     const [searchInput, setSearchInput] = useState("");
 
@@ -27,20 +28,18 @@ export const StateProvider = ({ children }) => {
         const md5Hash = md5(timestamp + privateKey + publicKey);
 
         try {
-            const heroesResponse = await axios.get(`https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
+            const heroesResponse = await axiosInstance.get(`/characters?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
+            const spiderResponse = await axiosInstance.get(`/characters?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&nameStartsWith=spider`)
+            const comicsResponse = await axiosInstance.get(`/comics?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
+            const eventsResponse = await axiosInstance.get(`/events?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
+            const creatorsResponse = await axiosInstance.get(`/creators?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
 
-            const spiderResponse = await axios.get(`https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&nameStartsWith=spider`)
-
-            const comicsResponse = await axios.get(`https://gateway.marvel.com:443/v1/public/comics?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
-
-            const eventsResponse = await axios.get(`https://gateway.marvel.com:443/v1/public/events?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
-
-            Promise.all([heroesResponse, spiderResponse, comicsResponse, eventsResponse]).then(
-                
+            Promise.all([heroesResponse, spiderResponse, comicsResponse, eventsResponse, creatorsResponse]).then(
                 setMarvelHeroes(heroesResponse.data.data.results),
                 setMarvelSpiderVerse(spiderResponse.data.data.results),
                 setMarvelComics(comicsResponse.data.data.results),
                 setMarvelEvents(eventsResponse.data.data.results),
+                setMarvelCreators(marvelCreators.data.data.results),
                 )
         } catch (error) {
             console.log(error);
@@ -48,7 +47,7 @@ export const StateProvider = ({ children }) => {
     }
 
     const mergeData = () => {
-        const mergedData = [...marvelHeroes, ...marvelComics, ...marvelEvents];
+        const mergedData = [...marvelHeroes, ...marvelComics, ...marvelEvents, ...marvelCreators];
         setDataBucket(mergedData);
         return dataBucket;
     }
@@ -67,7 +66,9 @@ export const StateProvider = ({ children }) => {
             mergeData,
             searchInput, 
             setSearchInput,
-            fetchData
+            fetchData,
+            marvelCreators, 
+            setMarvelCreators
         }}>
             {children}
         </StateContext.Provider>

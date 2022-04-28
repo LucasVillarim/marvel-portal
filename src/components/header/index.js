@@ -1,8 +1,9 @@
 import { useGlobal } from "../../context/context";
-import { useState } from "react";
+import React, { useState } from "react";
 import DropdownMenu from "./dropdown-menu";
 import { Link } from "react-router-dom";
 import style from './style.css';
+import SearchbarContent from "../searchbar";
 
 const HeaderComponent = () => {
     const { dataBucket, searchInput, setSearchInput } = useGlobal();
@@ -24,22 +25,13 @@ const HeaderComponent = () => {
             </Link>
             <DropdownMenu />
             <div className='search-bar'>
-            <input placeholder="Search" value={searchInput} onChange={(event) => searchKeyword(event.target)} />
-            <span onClick={() => setSearchInput("")}>Clear</span>
+                <input placeholder="Search" value={searchInput} onChange={(event) => searchKeyword(event.target)} />
+                <span onClick={() => setSearchInput("")}>Clear</span>
             </div>
             <div className="">
 
-                {/* Filtered List to make some search */}
                 <ul className="search-content">
-                    {searchInput !== "" && filteredData.map(obj => {
-                        return (
-                            <li key={obj.id}>
-                                <a href={obj.urls[0].url} target="_blank">
-                                    {obj.title || obj.name}
-                                </a>
-                            </li>
-                        )
-                    })}
+                    <SearchbarContent recipient={filteredData} />
                 </ul>
 
             </div>

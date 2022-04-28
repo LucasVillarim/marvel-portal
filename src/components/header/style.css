@@ -35,6 +35,7 @@
 }
 
 .search-bar input {
+    width: 200px;
     height: 36px;
 }
 
