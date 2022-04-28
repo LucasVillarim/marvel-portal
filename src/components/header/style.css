@@ -1,0 +1,80 @@
+.header-options--wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.home-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, .2);
+    z-index: 500;
+}
+
+.header-options li {
+    margin-right: 16px;
+}
+
+.members-btn {
+    color: red;
+}
+
+.marvel-logo {
+    position: absolute;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 auto 0 32px; */
+}
+
+.search-bar {
+    position: absolute;
+    right: 50px;
+}
+
+.search-bar input {
+    height: 36px;
+}
+
+.search-bar span {
+    margin-left: -40px;
+    z-index: 5;
+    cursor: pointer;
+}
+.search-bar span:hover {
+    color: #c4c4c4;
+}
+
+.search-content {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    width: 250px;
+    max-height: 300px;
+    padding: 0;
+    margin: 0;
+    z-index: 500;
+    overflow-y: scroll;
+}
+
+.hide-content {
+    display: none;
+}
+
+.show-content {
+    display: flex;
+}
+
+.search-content li {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #c4c4c4;
+}
+

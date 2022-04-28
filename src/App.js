@@ -1,12 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import HomeComponent from './pages/home';
 import { StateProvider } from './context/context';
+import { BrowserRouter } from 'react-router-dom';
+import RoutesComponent from './routes/routes';
+import HeaderComponent from './components/header';
 
 function App() {
   return (
       <StateProvider>
-        <HomeComponent />
+        <BrowserRouter>
+        <HeaderComponent />
+        <RoutesComponent />
+        </BrowserRouter>
       </StateProvider>
 
   );

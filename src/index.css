@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -18,6 +23,74 @@ ul {
   list-style-type: none;
 }
 
-l1, l2, l3, l4, l5, l6, a {
+l1, l2, l3, l4, l5, l6, a, span {
   font-family: 'Oswald', sans-serif;
+}
+
+.card-animated {
+  font-size: 20px;
+  margin: 0 8px 16px 0;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.card-animated:hover {
+    transform: rotateX(180deg);
+}
+
+.card-body {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 150px;
+  height: 225px;
+  border-radius: 16px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  /* border-radius: 16px; */
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+  /* overflow: hidden; */
+}
+
+.card-body:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  height: 225px;
+  /* border-radius: 16px; */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  /* padding: 1em; */
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  /* padding-top: 16px; */
+  background: #ED213A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+.card-back l3,
+.card-back span {
+  color: white;
+  
 }

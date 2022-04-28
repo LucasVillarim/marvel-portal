@@ -1,34 +1,6 @@
 .container {
 }
 
-.header-options--wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.searchbar {
-    height: 30px;
-}
-
-.home-header {
-    /* background: #cf0000; */
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 1px 1px 1px 1px rgb(0, 0, 0, .2);
-    z-index: 500;
-}
-
-.header-options li {
-    margin-right: 16px;
-}
-
-.marvel-logo {
-    position: absolute;
-    left: 5%;
-    /* margin: 0 auto 0 32px; */
-}
 
 ul {
     display: flex;
@@ -46,21 +18,13 @@ ul {
     width: auto;
 }
 
-.carousel-detail {
-    position: absolute;
-    bottom: 33%;
-    width: 100%;
-    height: 50px;
-    z-index: 1;
-}
-
 .section-banner {
     position: relative;
 }
 
 .banner-container {
     overflow: hidden;
-    /* max-height: 500px; */
+    max-height: 500px;
     margin-top: 100px;
 }
 
@@ -146,6 +110,7 @@ ul {
 }
 
 .section-images--info l1 {
+    color: #000;
     font-size: 30px;
     position: absolute;
     top: -100px;
@@ -219,6 +184,7 @@ ul {
 .section-cards l1 {
     font-size: 30px;
     margin: 100px 0 30px 0;
+    color: #000;
 }
 
 .cards-comics {
@@ -253,3 +219,11 @@ ul {
     color: white;
     margin-bottom: 8px;
 }
+
+
+
+
+
+
+
+  
