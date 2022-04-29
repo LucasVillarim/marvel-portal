@@ -2,7 +2,6 @@
   "name": "ratto-marvel",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://626b3554fda44a007d6b0dbb--startling-cannoli-ef5267.netlify.app/home",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
