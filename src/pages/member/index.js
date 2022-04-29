@@ -9,7 +9,7 @@ const MemberComponent = () => {
             <section className='buy-comics'>
                 <h2>Limited Collection for Members</h2>
                 <div className='comics-pack'>
-                    <Cards content="comics" selectList={[14, 4, 13, 17, 19]} />
+                    <Cards content="comics" selectList={[14, 4, 31, 17, 19]} />
                 </div>
 
                 <Countdown className='countdown' date={Date.now() + 1000000} />

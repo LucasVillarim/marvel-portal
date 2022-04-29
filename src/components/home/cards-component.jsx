@@ -23,11 +23,11 @@ const Cards = (props) => {
                 <div key={number} className="card-body">
                     <div className="card-inner">
                         <div className="card-front">
-                            <img src={marvelContent[number]?.thumbnail?.path + '/portrait_xlarge.jpg'}></img>
+                            <img src={marvelContent[number]?.thumbnail?.path + '/portrait_xlarge.jpg'} alt="thumbnail"></img>
                         </div>
                         <div className="card-back">
                             <span>{marvelContent[number]?.title}</span>
-                            <a href={marvelContent[number]?.urls[0].url} target="_blank">See Details</a>
+                            <a href={marvelContent[number]?.urls[0].url} target="_blank" rel="noreferrer">See Details</a>
 
                         </div>
                     </div>

@@ -31,10 +31,10 @@ export const StateProvider = ({ children }) => {
 
         try {
             const heroesResponse = await axiosInstance.get(`/characters?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&limit=50`)
-            const spiderResponse = await axiosInstance.get(`/characters?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&nameStartsWith=spider`)
-            const comicsResponse = await axiosInstance.get(`/comics?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
-            const eventsResponse = await axiosInstance.get(`/events?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
-            const creatorsResponse = await axiosInstance.get(`/creators?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
+            const spiderResponse = await axiosInstance.get(`/characters?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&nameStartsWith=spider&limit=50`)
+            const comicsResponse = await axiosInstance.get(`/comics?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&limit=50`)
+            const eventsResponse = await axiosInstance.get(`/events?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&limit=50`)
+            const creatorsResponse = await axiosInstance.get(`/creators?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&limit=50`)
 
             Promise.all([heroesResponse, spiderResponse, comicsResponse, eventsResponse, creatorsResponse]).then(
                 setMarvelHeroes(heroesResponse.data.data.results),
