@@ -5,7 +5,7 @@ O desafio foi desenvolvido em ReactJS fazendo uso de algumas libs externas apena
 
 # Link da aplicação
 
-https://626b3554fda44a007d6b0dbb--startling-cannoli-ef5267.netlify.app/home
+https://startling-cannoli-ef5267.netlify.app/home
 
 
 ## Arquitetura
