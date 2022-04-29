@@ -30,7 +30,7 @@ export const StateProvider = ({ children }) => {
         const md5Hash = md5(timestamp + privateKey + publicKey);
 
         try {
-            const heroesResponse = await axiosInstance.get(`/characters?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
+            const heroesResponse = await axiosInstance.get(`/characters?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&limit=50`)
             const spiderResponse = await axiosInstance.get(`/characters?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&nameStartsWith=spider`)
             const comicsResponse = await axiosInstance.get(`/comics?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
             const eventsResponse = await axiosInstance.get(`/events?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)

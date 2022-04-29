@@ -18,7 +18,7 @@ export default function HomeComponent() {
             <section className='section-banner'>
                 <h1 className='section-title'>Marvel Universe</h1>
                 <div className='banner-container'>
-                    <img src='https://c4.wallpaperflare.com/wallpaper/794/5/251/dual-monitors-multiple-display-marvel-comics-comics-wallpaper-thumb.jpg' alt="thumbnail"></img>
+                    <img src='https://c4.wallpaperflare.com/wallpaper/794/5/251/dual-monitors-multiple-display-marvel-comics-comics-wallpaper-thumb.jpg' alt="thumbnail" />
                 </div>
             </section>
 

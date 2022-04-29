@@ -128,3 +128,9 @@ h1 {
 .members-btn {
     margin-left: 32px;
 }
+
+.heroes-content,
+.comics-content,
+.events-content {
+    box-shadow: 1px 1px 5px 3px rgb(0, 0, 0, 0.2);
+}

@@ -4,6 +4,7 @@
 }
 
 .home-header {
+    background-color: #fff;
     position: relative;
     display: flex;
     justify-content: center;
@@ -36,6 +37,8 @@
 .search-bar input {
     width: 200px;
     height: 36px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
 }
 
 .search-bar span {

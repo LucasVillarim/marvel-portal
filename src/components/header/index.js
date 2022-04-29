@@ -3,7 +3,7 @@ import { useState } from "react";
 import DropdownMenu from "./dropdown-menu.jsx";
 import { Link } from "react-router-dom";
 import './style.css';
-import SearchbarContent from "../searchbar";
+import SearchbarContent from "../searchbar/index.jsx";
 
 const HeaderComponent = () => {
     const { dataBucket, searchInput, setSearchInput } = useGlobal();
@@ -21,7 +21,7 @@ const HeaderComponent = () => {
     return (
         <header className="home-header">
             <Link to="/home" className="marvel-logo">
-                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png' width='150' alt="thumbnail"></img>
+                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png' width='150' alt="thumbnail" />
             </Link>
             <DropdownMenu />
             <div className='search-bar'>
