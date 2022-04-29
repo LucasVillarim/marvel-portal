@@ -26,7 +26,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 0 auto 0 32px; */
 }
 
 .search-bar {
@@ -44,6 +43,7 @@
     z-index: 5;
     cursor: pointer;
 }
+
 .search-bar span:hover {
     color: #c4c4c4;
 }
@@ -78,4 +78,3 @@
     cursor: pointer;
     border-bottom: 1px solid #c4c4c4;
 }
-

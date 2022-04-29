@@ -1,4 +1,3 @@
-import React from 'react';
 import HomeComponent from '../pages/home';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import EventsComponent from '../pages/marvel-content';

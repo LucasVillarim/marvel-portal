@@ -4,7 +4,7 @@ const LoadingComponent = () => {
   
     return (
         <div>
-            <div></div>
+            <div>Loading...</div>
         </div>
 
     )

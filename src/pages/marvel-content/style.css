@@ -1,15 +1,14 @@
-
 .events-container {
     position: relative;
-    background: rgb(115,0,0);
-    background: linear-gradient(90deg, rgba(115,0,0,1) 34%, rgba(198,0,0,1) 100%);
-     display: flex;    
-     width: 70%;
+    background: rgb(115, 0, 0);
+    background: linear-gradient(90deg, rgba(115, 0, 0, 1) 34%, rgba(198, 0, 0, 1) 100%);
+    display: flex;
+    width: 70%;
     margin: auto;
     padding-top: 100px;
     display: flex;
     flex-wrap: wrap;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -24,7 +23,7 @@
 .event-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     max-width: 150px;
     margin: 8px;
@@ -36,7 +35,7 @@ img {
 
 .event-wrapper:hover img {
     transform: translateY(-10px);
-    box-shadow: 1px 1px 5px 5px rgb(0,0,0, 0.2);
+    box-shadow: 1px 1px 5px 5px rgb(0, 0, 0, 0.2);
 }
 
 .event-wrapper ul {
@@ -52,6 +51,7 @@ img {
 .event-wrapper h3 {
     color: white;
 }
+
 .event-wrapper a {
     color: white;
 }

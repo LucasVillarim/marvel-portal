@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import { createContext, useState, useContext, useEffect } from 'react';
 import axiosInstance from '../services';
 import md5 from 'md5';
 
@@ -24,7 +24,7 @@ export const StateProvider = ({ children }) => {
             mergeData();
         }
     }, [searchInput])
-    
+
     async function fetchData() {
         const timestamp = new Date().toString();
         const md5Hash = md5(timestamp + privateKey + publicKey);
@@ -35,7 +35,6 @@ export const StateProvider = ({ children }) => {
             const comicsResponse = await axiosInstance.get(`/comics?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
             const eventsResponse = await axiosInstance.get(`/events?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
             const creatorsResponse = await axiosInstance.get(`/creators?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}`)
-            console.log(creatorsResponse)
 
             Promise.all([heroesResponse, spiderResponse, comicsResponse, eventsResponse, creatorsResponse]).then(
                 setMarvelHeroes(heroesResponse.data.data.results),
@@ -43,7 +42,7 @@ export const StateProvider = ({ children }) => {
                 setMarvelComics(comicsResponse.data.data.results),
                 setMarvelEvents(eventsResponse.data.data.results),
                 setMarvelCreators(creatorsResponse.data.data.results),
-                )
+            )
         } catch (error) {
             console.log(error);
         }
@@ -67,10 +66,10 @@ export const StateProvider = ({ children }) => {
             setMarvelEvents,
             dataBucket,
             mergeData,
-            searchInput, 
+            searchInput,
             setSearchInput,
             fetchData,
-            marvelCreators, 
+            marvelCreators,
             setMarvelCreators,
             imageUrlComplement
         }}>

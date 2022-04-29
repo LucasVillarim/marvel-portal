@@ -34,9 +34,12 @@ h1 {
 }
 
 /* HEROES MENU */
-
 .menu-link {
     font-size: 20px;
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 .btn-wrapper {

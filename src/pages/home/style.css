@@ -31,7 +31,8 @@ ul {
     overflow: hidden;
     max-height: 500px;
 }
-.carousel-div img { 
+
+.carousel-div img {
     width: auto;
 }
 
@@ -92,6 +93,7 @@ ul {
     position: relative;
     justify-content: center;
 }
+
 .row-1--wrapper h4,
 .row-2--wrapper h4,
 .row-3--wrapper h4 {
@@ -103,6 +105,7 @@ ul {
     transform: translateX(-50%);
     text-align: center;
 }
+
 .row-2--wrapper {
     background-color: transparent !important;
     display: flex;
@@ -145,8 +148,8 @@ ul {
 }
 
 .row-1 {
-    background:linear-gradient(to left, #040404, #000000, #656565);
-        transform: rotate(-1deg);
+    background: linear-gradient(to left, #040404, #000000, #656565);
+    transform: rotate(-1deg);
     margin-left: -15px;
     width: 105%;
 }
@@ -161,8 +164,10 @@ ul {
     width: 105%;
     background-color: #ED1D24;
     transform: rotate(1deg);
-    background: #ED213A;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: #ED213A;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);
+    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #93291E, #ED213A);
 }
 
@@ -173,8 +178,8 @@ ul {
 
 .row-3 {
     margin-top: 150px;
-    background:linear-gradient(to right, #040404, #000000, #656565);
-        transform: rotate(-0.7deg);
+    background: linear-gradient(to right, #040404, #000000, #656565);
+    transform: rotate(-0.7deg);
     margin-left: -15px;
     width: 105%;
 }
@@ -243,11 +248,3 @@ ul {
     color: white;
     margin-bottom: 8px;
 }
-
-
-
-
-
-
-
-  

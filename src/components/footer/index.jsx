@@ -1,7 +1,6 @@
 import style from './style.css';
 
 const FooterComponent = () => {
-
     return (
         <footer className='footer-container'>
             <p>Data provided by Marvel. © 2014 Marvel</p>

@@ -1,8 +1,8 @@
 import { useGlobal } from "../../context/context";
-import React, { useState } from "react";
-import DropdownMenu from "./dropdown-menu";
+import { useState } from "react";
+import DropdownMenu from "./dropdown-menu.jsx";
 import { Link } from "react-router-dom";
-import style from './style.css';
+import './style.css';
 import SearchbarContent from "../searchbar";
 
 const HeaderComponent = () => {
@@ -11,7 +11,7 @@ const HeaderComponent = () => {
 
     const searchKeyword = (target) => {
         setSearchInput(target.value);
-        const key = target.value;
+        const key = target.value.toLowerCase();
         const search = dataBucket && dataBucket?.filter(data => {
             if (data.title?.toLowerCase().includes(key) || data.name?.toLowerCase().includes(key)) return data;
         })
@@ -21,12 +21,12 @@ const HeaderComponent = () => {
     return (
         <header className="home-header">
             <Link to="/home" className="marvel-logo">
-                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png' width='150'></img>
+                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png' width='150' alt="thumbnail"></img>
             </Link>
             <DropdownMenu />
             <div className='search-bar'>
                 <input placeholder="Search" value={searchInput} onChange={(event) => searchKeyword(event.target)} />
-                <span onClick={() => setSearchInput("")}>Clear</span>
+                <span onClick={() => setSearchInput("")} aria-hidden="true">Clear</span>
             </div>
             <div className="">
 

@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useGlobal } from '../../context/context';
-import style from './dropdown-style.css';
+import './dropdown-style.css';
 
 export default function DropdownMenu() {
     const { marvelHeroes, marvelComics, marvelEvents, marvelCreators, imageUrlComplement } = useGlobal();
@@ -11,7 +11,7 @@ export default function DropdownMenu() {
     }
 
     const generateMenuOption = (content) => {
-        // Generates a random number, so we can have some different things appearing in screen
+        // Generates a random number, so we can have some different things appearing on screen
         const numberList = [];
         while (numberList.length < 6) {
             let randomNumber = Math.floor(Math.random() * 20) + 1;
@@ -24,10 +24,10 @@ export default function DropdownMenu() {
                     <div className="card-body">
                         <div className="card-inner">
                             <div className="card-front">
-                                <img src={content[number]?.thumbnail?.path + imageUrlComplement} />
+                                <img src={content[number]?.thumbnail?.path + imageUrlComplement} alt="thumbnail" />
                             </div>
                             <div className="card-back">
-                                <a className='white-link' href={content[number]?.urls[0].url}>Details</a>
+                                <a className='white-link' href={content[number]?.urls[0].url} target="_blank" rel="noreferrer">Details</a>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@ export default function DropdownMenu() {
         <>
             {/* Heroes Menu Option */}
             <div className='btn-wrapper margin-16 padding-rl-20'>
-                <a className='menu-link nav--link' onClick={() => handleRoute('heroes')}>Heroes</a>
+                <button className='menu-link nav--link' onClick={() => handleRoute('heroes')}>Heroes</button>
             </div>
             <div className='heroes-content'>
                 <h1>Most famous</h1>
@@ -69,7 +69,7 @@ export default function DropdownMenu() {
 
             {/* Creators Menu Option */}
             <div className='btn-wrapper margin-16 padding-rl-20'>
-                <a className='menu-link nav--link' onClick={() => handleRoute('creators')}>Creators</a>
+                <button className='menu-link nav--link' onClick={() => handleRoute('creators')}>Creators</button>
             </div>
             <div className='heroes-content'>
                 <h1>Legends</h1>
@@ -80,7 +80,7 @@ export default function DropdownMenu() {
 
             {/* Comics Menu Option */}
             <div className='btn-wrapper--comics margin-16 padding-rl-20'>
-                <a className='menu-link nav--link' onClick={() => handleRoute('comics')}>Comics</a>
+                <button className='menu-link nav--link' onClick={() => handleRoute('comics')}>Comics</button>
             </div>
             <div className='comics-content'>
                 <h1>Trending</h1>
@@ -91,7 +91,7 @@ export default function DropdownMenu() {
 
             {/* Events Menu Option */}
             <div className='btn-wrapper--events margin-16 padding-rl-20'>
-                <a className='menu-link nav--link' onClick={() => handleRoute('events')}>Events</a>
+                <button className='menu-link nav--link' onClick={() => handleRoute('events')}>Events</button>
             </div>
             <div className='events-content'>
                 <h1>Soon</h1>

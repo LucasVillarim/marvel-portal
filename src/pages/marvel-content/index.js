@@ -1,24 +1,24 @@
 import { useGlobal } from '../../context/context';
 import { useLocation } from 'react-router-dom';
-import style from './style.css';
+import './style.css';
 
 export default function MarvelContentComponent() {
     const { marvelEvents, marvelComics, marvelHeroes, marvelCreators } = useGlobal();
-    const {state} = useLocation();
+    const { state } = useLocation();
 
     const handleContentToMap = () => {
-      switch (state) {
-          case 'heroes':
-              return mapContent(marvelHeroes);
-          case 'comics':
-              return mapContent(marvelComics);
-          case 'events':
-              return mapContent(marvelEvents);
-          case 'creators':
-              return mapContent(marvelCreators);
-          default:
-              break;
-      }
+        switch (state) {
+            case 'heroes':
+                return mapContent(marvelHeroes);
+            case 'comics':
+                return mapContent(marvelComics);
+            case 'events':
+                return mapContent(marvelEvents);
+            case 'creators':
+                return mapContent(marvelCreators);
+            default:
+                break;
+        }
     }
 
     // Dynamically maps the content passed
@@ -30,29 +30,29 @@ export default function MarvelContentComponent() {
                     <h3>{marvelContent?.title || marvelContent?.fullName}</h3>
                     <ul>
                         <li>
-                            <a href={marvelContent.urls[0]?.url} target="_blank">
+                            <a href={marvelContent.urls[0]?.url} target="_blank" rel="noreferrer">
                                 {
-                                marvelContent.urls[0] 
-                                ? 'Details' 
-                                : ''
+                                    marvelContent.urls[0]
+                                        ? 'Details'
+                                        : ''
                                 }
                             </a>
                         </li>
                         <li>
-                            <a href={marvelContent.urls[1]?.url} target="_blank">
+                            <a href={marvelContent.urls[1]?.url} target="_blank" rel="noreferrer">
                                 {
-                                marvelContent.urls[1] 
-                                ? 'Wiki' 
-                                : ''
+                                    marvelContent.urls[1]
+                                        ? 'Wiki'
+                                        : ''
                                 }
                             </a>
                         </li>
                         <li>
-                            <a href={marvelContent.urls[2]?.url} target="_blank">
+                            <a href={marvelContent.urls[2]?.url} target="_blank" rel="noreferrer">
                                 {
-                                marvelContent.urls[2] 
-                                ? 'Comic' 
-                                : ''
+                                    marvelContent.urls[2]
+                                        ? 'Comic'
+                                        : ''
                                 }
                             </a>
                         </li>

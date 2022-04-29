@@ -1,6 +1,6 @@
 import { useGlobal } from '../../context/context';
-import Cards from '../../components/home/cards-component';
-import style from './style.css';
+import Cards from '../../components/home/cards-component.jsx';
+import './style.css';
 
 export default function HomeComponent() {
     const { marvelSpiderVerse } = useGlobal();
@@ -18,7 +18,7 @@ export default function HomeComponent() {
             <section className='section-banner'>
                 <h1 className='section-title'>Marvel Universe</h1>
                 <div className='banner-container'>
-                    <img src='https://c4.wallpaperflare.com/wallpaper/794/5/251/dual-monitors-multiple-display-marvel-comics-comics-wallpaper-thumb.jpg'></img>
+                    <img src='https://c4.wallpaperflare.com/wallpaper/794/5/251/dual-monitors-multiple-display-marvel-comics-comics-wallpaper-thumb.jpg' alt="thumbnail"></img>
                 </div>
             </section>
 
@@ -28,12 +28,12 @@ export default function HomeComponent() {
                 <div className='row-1'>
                     <div className='row-1--wrapper'>
                         <h4>{marvelSpiderVerse[6]?.name}</h4>
-                        <img className='' src={marvelSpiderVerse[6]?.thumbnail?.path + '/portrait_xlarge.jpg'} />
+                        <img className='' src={marvelSpiderVerse[6]?.thumbnail?.path + '/portrait_xlarge.jpg'} alt="thumbnail" />
                     </div>
                     <div className='row-align--center'>
-                        <a className='nav--link' href={marvelSpiderVerse[6]?.urls[0]?.url} target="_blank">Details</a>
-                        <a className='nav--link' href={marvelSpiderVerse[6]?.urls[1]?.url} target="_blank">Wiki</a>
-                        <a className='nav--link' href={marvelSpiderVerse[6]?.urls[2]?.url} target="_blank">Comic Link</a>
+                        <a className='nav--link' href={marvelSpiderVerse[6]?.urls[0]?.url} target="_blank" rel="noreferrer">Details</a>
+                        <a className='nav--link' href={marvelSpiderVerse[6]?.urls[1]?.url} target="_blank" rel="noreferrer">Wiki</a>
+                        <a className='nav--link' href={marvelSpiderVerse[6]?.urls[2]?.url} target="_blank" rel="noreferrer">Comic Link</a>
                     </div>
                 </div>
 
@@ -45,14 +45,14 @@ export default function HomeComponent() {
                     </div>
                     <div className='row-2--wrapper'>
                         <h4>{marvelSpiderVerse[8]?.name}</h4>
-                        <img src={marvelSpiderVerse[8]?.thumbnail?.path + '/portrait_xlarge.jpg'} />
+                        <img src={marvelSpiderVerse[8]?.thumbnail?.path + '/portrait_xlarge.jpg'} alt="thumbnail" />
                     </div>
                 </div>
 
                 <div className='row-3'>
                     <div className='row-3--wrapper'>
                         <h4>{marvelSpiderVerse[2]?.name}</h4>
-                        <img src={marvelSpiderVerse[2]?.thumbnail?.path + '/portrait_xlarge.jpg'} />
+                        <img src={marvelSpiderVerse[2]?.thumbnail?.path + '/portrait_xlarge.jpg'} alt="thumbnail" />
                     </div>
                     <div className='row-align--center'>
                         <a className='nav--link' href={marvelSpiderVerse[2]?.urls[0]?.url}>Details</a>
@@ -73,16 +73,3 @@ export default function HomeComponent() {
         </div>
     )
 }
-
-
-{/* <div className="card-body">
-<div className="card-inner">
-    <div className="card-front">
-        <h5 className="card-title">Black</h5>
-
-    </div>
-    <div className="card-back">
-        <h1>Olá</h1>
-    </div>
-</div>
-</div> */}
