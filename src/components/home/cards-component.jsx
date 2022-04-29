@@ -23,7 +23,7 @@ const Cards = (props) => {
                 <div key={number} className="card-body">
                     <div className="card-inner">
                         <div className="card-front">
-                            <img src={marvelContent[number]?.thumbnail?.path + '/portrait_xlarge.jpg'} alt="thumbnail"></img>
+                            <img src={marvelContent[number]?.thumbnail?.path + '/portrait_xlarge.jpg'} alt="thumbnail" />
                         </div>
                         <div className="card-back">
                             <span>{marvelContent[number]?.title}</span>
