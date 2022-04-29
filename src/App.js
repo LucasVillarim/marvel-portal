@@ -14,7 +14,6 @@ function App() {
         <FooterComponent />
       </BrowserRouter>
     </StateProvider>
-
   );
 }
 
