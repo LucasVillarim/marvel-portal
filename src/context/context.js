@@ -1,12 +1,10 @@
 import { createContext, useState, useContext, useEffect } from 'react';
 import axiosInstance from '../services';
-import md5 from 'md5';
 import LoadingComponent from '../components/loading/index.jsx';
 
 const StateContext = createContext({});
 
-const publicKey = 'ea716cd54a0a2799f85adbee54838ad7';
-const privateKey = '3eeb4882fb54237c3a208e4a8ec84daa1994b6de';
+const publicKey =  'ea716cd54a0a2799f85adbee54838ad7';
 
 export const StateProvider = ({ children }) => {
     const imageUrlComplement = '/portrait_xlarge.jpg';
@@ -33,16 +31,15 @@ export const StateProvider = ({ children }) => {
     }, [searchInput])
     
     async function fetchData() {
-        const timestamp = new Date().toString();
-        const md5Hash = md5(timestamp + privateKey + publicKey);
+        const timestamp = String(new Date().toLocaleDateString());
         
         try {
             setLoading(true);
-            const heroesResponse = await axiosInstance.get(`/characters?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&limit=50`)
-            const spiderResponse = await axiosInstance.get(`/characters?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&nameStartsWith=spider&limit=50`)
-            const comicsResponse = await axiosInstance.get(`/comics?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&limit=50`)
-            const eventsResponse = await axiosInstance.get(`/events?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&limit=50`)
-            const creatorsResponse = await axiosInstance.get(`/creators?ts=${timestamp}&apikey=${publicKey}&hash=${md5Hash}&limit=50`)
+            const heroesResponse = await axiosInstance.get(`/characters?ts=${timestamp}&apikey=${publicKey}&limit=50`)
+            const spiderResponse = await axiosInstance.get(`/characters?ts=${timestamp}&apikey=${publicKey}&nameStartsWith=spider&limit=50`)
+            const comicsResponse = await axiosInstance.get(`/comics?ts=${timestamp}&apikey=${publicKey}&limit=50`)
+            const eventsResponse = await axiosInstance.get(`/events?ts=${timestamp}&apikey=${publicKey}&limit=50`)
+            const creatorsResponse = await axiosInstance.get(`/creators?ts=${timestamp}&apikey=${publicKey}&limit=50`)
 
             Promise.all([heroesResponse, spiderResponse, comicsResponse, eventsResponse, creatorsResponse]).then(
                 setMarvelHeroes(heroesResponse.data.data.results),
