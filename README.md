@@ -1,4 +1,4 @@
-# MARVEL Portal ( Ratto.co Desafio )
+# MARVEL Portal
 
 O desafio foi desenvolvido em ReactJS fazendo uso de algumas libs externas apenas para complementar e auxiliar em certas atividades. Sobre o design, o mesmo foi idealizado por mim, inspirado no próprio site da Marvel, já que todo o conteúdo da API deve ser linkado de volta para eles, faz sentido seguir uma linha parecida de design.
 
